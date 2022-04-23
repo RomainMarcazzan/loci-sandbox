@@ -1,0 +1,20 @@
+$brown: #441710;
+$brown-light: #985f3f;
+$red: #842d1b;
+$red-light: #aa5246;
+// $cream: #f4e5d5;
+$cream: #fcf9f8;
+$blue: #6096a8;
+$breakpoints: (
+  Laptop4K: 2559px,
+  LaptopL: 1439px,
+  Laptop: 1023px,
+  Tablet: 767px,
+  MobileL: 424px,
+  MobileS: 319px,
+);
+$coef4K: 0.8;
+$coefLL: 0.7;
+$coefL: 0.6;
+$coefT: 0.5;
+$coefML: 0.4;

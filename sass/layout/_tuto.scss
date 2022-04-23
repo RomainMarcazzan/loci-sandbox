@@ -1,0 +1,88 @@
+.tuto {
+  // margin-top: 12vw;
+  color: $red-light;
+  font-family: "Metafors";
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    &__container {
+      position: relative;
+      & img {
+        position: absolute;
+        top: -2rem;
+        right: -5rem;
+        width: 5rem;
+        transform: rotate(45deg);
+        @include maxTablet {
+          width: 2.5rem;
+          right: -2.5rem;
+          top: -1rem;
+        }
+        @include maxMobileL {
+          display: none;
+        }
+      }
+    }
+  }
+  &__grid {
+    display: flex;
+    margin-top: 5vw;
+    @include maxTablet {
+      flex-direction: column;
+      align-items: center;
+    }
+    & div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 33.3%;
+      @include maxTablet {
+        width: inherit;
+        margin: 1rem auto;
+      }
+      & img {
+        height: 10rem;
+        @include maxLaptopL {
+          height: 10rem * $coefLL;
+        }
+        @include maxLaptop {
+          height: 10rem * $coefL;
+        }
+      }
+      & div {
+        width: 3rem;
+        line-height: 3rem;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 2rem;
+        border: 1px solid;
+        margin: 2rem auto;
+      }
+
+      & h4 {
+        width: 50%;
+        text-align: center;
+        @include maxLaptopL {
+          width: 60%;
+        }
+        @include maxLaptop {
+          width: 70%;
+        }
+        @include maxTablet {
+          width: 80%;
+        }
+      }
+    }
+  }
+  &__nut-right {
+    position: absolute;
+    right: -10rem;
+    top: -20rem;
+  }
+  &__nut-left {
+    position: absolute;
+    left: -5rem;
+    top: -10rem;
+  }
+}

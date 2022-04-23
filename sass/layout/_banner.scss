@@ -1,0 +1,29 @@
+.banner {
+  position: relative;
+  & img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  &__info-container {
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h1 {
+      color: #fcf9f8;
+      font-family: "Metafors";
+    }
+    & button {
+      font-size: 1.5rem;
+      @include maxLaptop4K {
+        font-size: 1.5rem * $coef4K;
+      }
+    }
+  }
+}

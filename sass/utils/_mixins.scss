@@ -1,0 +1,40 @@
+@mixin maxLaptop4K {
+  @media screen and (max-width: map-get($breakpoints, Laptop4K)) {
+    @content;
+  }
+}
+
+@mixin maxLaptopL {
+  @media screen and (max-width: map-get($breakpoints, LaptopL)) {
+    @content;
+  }
+}
+
+@mixin maxLaptop {
+  @media screen and (max-width: map-get($breakpoints, Laptop)) {
+    @content;
+  }
+}
+
+@mixin maxTablet {
+  @media screen and (max-width: map-get($breakpoints, Tablet)) {
+    @content;
+  }
+}
+
+@mixin maxMobileL {
+  @media screen and (max-width: map-get($breakpoints, MobileL)) {
+    @content;
+  }
+}
+
+// @mixin btn($paddingTB, $paddingLR) {
+//   padding: $paddingTB $paddingLR;
+//   background-color: $blue;
+//   color: #fdfcfa;
+//   border: none;
+//   text-decoration: none;
+//   text-align: center;
+//   cursor: pointer;
+//   transition: all ease-in-out;
+// }

@@ -1,0 +1,47 @@
+.article-page {
+  padding-top: 15rem;
+  &__title {
+    margin-bottom: 2vh;
+  }
+  &__subtitle {
+    margin-bottom: 4vh;
+  }
+  &__photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @include maxMobileL {
+      flex-direction: column;
+      align-items: center;
+    }
+    & img {
+      height: 20vw;
+      object-fit: cover;
+      padding: 1vw;
+      @include maxTablet {
+        height: 15rem;
+        max-width: 90vw;
+      }
+    }
+  }
+  &__text {
+    margin-top: 4vh;
+  }
+  &__change-article {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+
+    & .nextLink {
+      &:hover {
+        font-weight: bold;
+      }
+    }
+
+    & .previousLink {
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}

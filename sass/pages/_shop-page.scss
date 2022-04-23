@@ -1,0 +1,83 @@
+.shop-page {
+  color: $red-light;
+  &__hero {
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include maxTablet {
+      flex-direction: column;
+      padding-top: 10rem;
+    }
+    &__left {
+      display: flex;
+      flex-direction: column;
+      // padding: 0 8rem;
+      & div {
+        margin: 1.5rem;
+      }
+      & img {
+        width: 15rem;
+        // @include maxLaptop {
+        //   width: 15rem;
+        // }
+      }
+    }
+    &__right {
+      width: 60%;
+      // justify-content: space-evenly;
+      flex-direction: column;
+      display: flex;
+      text-align: center;
+      & h1 {
+        font-size: 3rem;
+
+        @include maxLaptop4K {
+          font-size: 3rem * $coef4K;
+        }
+        @include maxLaptopL {
+          font-size: 3rem * $coefLL;
+        }
+        @include maxLaptop {
+          font-size: 3rem * $coefL;
+        }
+        @include maxTablet {
+          font-size: 3rem * $coefT;
+        }
+        @include maxMobileL {
+          font-size: 3rem * $coefML;
+        }
+      }
+      & p {
+        margin: 1rem auto;
+      }
+      & span {
+        font-family: "Metafors";
+        font-size: 2.5rem;
+        font-style: italic;
+      }
+      & p:nth-child(3),
+      p:nth-child(5) {
+        font-weight: bold;
+      }
+    }
+  }
+  &__why {
+    text-align: center;
+    & h2 {
+      font-family: "Metafors";
+      margin-bottom: 1rem;
+    }
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      & p {
+        padding: 1rem;
+        border: 1px solid $red-light;
+        border-radius: 2rem;
+        margin: 1rem;
+      }
+    }
+  }
+}

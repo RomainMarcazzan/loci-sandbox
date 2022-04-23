@@ -1,0 +1,26 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/animations";
+
+@import "./components/actuality-card.scss";
+@import "./components/button-blue.scss";
+
+@import "./base/typography";
+@import "./layout/navbar";
+@import "./layout/banner";
+@import "./layout/hero";
+@import "./layout/tuto";
+@import "./layout/footer";
+@import "./layout/new-products";
+@import "./layout/actualities";
+@import "./layout/contact-form";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./pages/home-page";
+@import "./pages/products-page";
+@import "./pages/actuality-page";
+@import "./pages/article-page";
+@import "./pages/contact-page";
+@import "./pages/shop-page";

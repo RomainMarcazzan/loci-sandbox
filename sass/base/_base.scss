@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("@/static/fonts/style.css");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 80vw;
+  // overflow: hidden;
+  @include maxLaptopL {
+    max-width: 90vw;
+  }
+}
+
+.smb {
+  margin-bottom: 8vh;
+}

@@ -1,0 +1,31 @@
+.actualities {
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    &__container {
+      position: relative;
+      & h2 {
+        color: $red-light;
+        font-family: "Metafors";
+      }
+      & img {
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        width: 4rem;
+      }
+    }
+  }
+  &__grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    margin: 5vh auto;
+  }
+}

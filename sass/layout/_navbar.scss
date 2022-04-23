@@ -1,0 +1,147 @@
+.navbar {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  &__top {
+    background-color: $red-light;
+    color: $cream;
+    padding: 0.5rem;
+    padding-left: 5vw;
+    p {
+      font-weight: lighter;
+    }
+  }
+  &__menu {
+    background-color: $cream;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    @include maxTablet {
+      justify-content: space-between;
+    }
+
+    & li {
+      font-weight: bold;
+      color: $red;
+      padding: 0.5rem 0;
+      position: relative;
+    }
+
+    & a {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        display: block;
+        background: none repeat scroll 0 0 transparent;
+        height: 4px;
+        width: 0;
+        background: $blue;
+        border-radius: 4px;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        @include maxTablet {
+          content: none;
+        }
+      }
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    & div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1;
+    }
+    & div:nth-child(2) {
+      padding: 0.5rem 0;
+      @include maxTablet {
+        padding: 0.5rem 0 0.5rem 2rem;
+      }
+      & a {
+        &:hover::after {
+          width: 8%;
+          left: 46%;
+        }
+      }
+      & img {
+        height: 10rem;
+        @include maxLaptop4K {
+          height: 10rem * $coef4K;
+        }
+        @include maxLaptopL {
+          height: 10rem * $coefLL;
+        }
+        @include maxLaptop {
+          height: 10rem * $coefL;
+        }
+        @include maxTablet {
+          height: 10rem * $coefT;
+        }
+      }
+    }
+    & div:nth-child(3) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1;
+      & li:nth-child(2) {
+        background-color: $blue;
+        color: $cream;
+        border: none;
+        text-decoration: none;
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          display: block;
+          height: 3px;
+          width: 0;
+          background: $red;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }
+        &:hover::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+      & li:nth-child(3) {
+        font-size: 1.5rem;
+        cursor: pointer;
+        :hover {
+          // transform: scale(1.1);
+          color: $blue;
+        }
+      }
+    }
+    &__hamburger {
+      font-size: 2rem;
+      padding-right: 2rem;
+      color: $red;
+
+      & i:nth-child(2) {
+        font-size: 2.5rem;
+      }
+      transition: all 0.3s ease-in-out;
+    }
+    &__dropdown {
+      color: $cream;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+
+      & li {
+        padding: 1rem;
+        background-color: $blue;
+        border-bottom: 1px solid $cream;
+        font-weight: bold;
+      }
+    }
+  }
+}

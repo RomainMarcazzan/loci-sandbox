@@ -1,0 +1,74 @@
+.hero {
+  color: $red;
+
+  &__title {
+    display: flex;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    @include maxTablet {
+      flex-direction: column;
+    }
+    & div {
+      width: 20vw;
+      margin: 0 2rem;
+      @include maxTablet {
+        margin: 1rem 0;
+        width: inherit;
+      }
+    }
+    & div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Metafors";
+      text-align: center;
+      // & h2 {
+      //   font-weight: bold;
+      // }
+    }
+    & div:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      & img {
+        height: 20rem;
+        @include maxLaptop4K {
+          height: 20rem * $coef4K;
+        }
+        @include maxLaptopL {
+          height: 20rem * $coefLL;
+        }
+        @include maxLaptop {
+          height: 20rem * $coefL;
+        }
+      }
+    }
+    & div:nth-child(3) {
+      display: flex;
+      justify-content: center;
+      & img {
+        height: 20rem;
+        @include maxLaptop4K {
+          height: 20rem * $coef4K;
+        }
+        @include maxLaptopL {
+          height: 20rem * $coefLL;
+        }
+        @include maxLaptop {
+          height: 20rem * $coefL;
+        }
+      }
+    }
+  }
+
+  &__text {
+    margin: 5rem auto auto auto;
+    text-align: center;
+    width: 50%;
+    @include maxTablet {
+      margin: 2rem auto auto auto;
+      width: 80%;
+      text-align: inherit;
+    }
+  }
+}

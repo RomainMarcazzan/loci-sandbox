@@ -1,0 +1,119 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  font-size: 9rem;
+  @include maxLaptop4K {
+    font-size: 9rem * $coef4K;
+  }
+  @include maxLaptop {
+    font-size: 9rem * $coefL;
+  }
+  @include maxTablet {
+    font-size: 9rem * $coefT;
+  }
+  @include maxMobileL {
+    font-size: 9rem * $coefML;
+  }
+}
+
+h2 {
+  font-size: 6rem;
+  @include maxLaptop4K {
+    font-size: 6rem * $coef4K;
+  }
+  @include maxLaptop {
+    font-size: 6rem * $coefL;
+  }
+  @include maxTablet {
+    font-size: 6rem * $coefT;
+  }
+  @include maxTablet {
+    font-size: 6rem * $coefT;
+  }
+  @include maxMobileL {
+    font-size: 6rem * $coefML;
+  }
+}
+
+h3 {
+  font-size: 4rem;
+  @include maxLaptop4K {
+    font-size: 4rem * $coef4K;
+  }
+  @include maxLaptop {
+    font-size: 4rem * $coefL;
+  }
+  @include maxTablet {
+    font-size: 4rem * $coefT;
+  }
+  @include maxMobileL {
+    font-size: 4rem * $coefML;
+  }
+}
+
+h4 {
+  font-size: 3rem;
+  @include maxLaptop4K {
+    font-size: 3rem * $coef4K;
+  }
+  @include maxLaptopL {
+    font-size: 3rem * $coefLL;
+  }
+  @include maxLaptop {
+    font-size: 3rem * $coefL;
+  }
+  @include maxTablet {
+    font-size: 3rem * $coefT;
+  }
+  @include maxMobileL {
+    font-size: 3rem * $coefML;
+  }
+}
+
+h5 {
+  font-size: 2rem;
+  @include maxLaptop4K {
+    font-size: 2rem * $coef4K;
+  }
+  @include maxLaptop {
+    font-size: 2rem * $coefL;
+  }
+}
+
+h6 {
+  font-size: 1.8rem;
+  @include maxLaptop4K {
+    font-size: 1.8rem * $coef4K;
+  }
+  @include maxLaptop {
+    font-size: 1.8rem * $coefL;
+  }
+}
+
+li {
+  font-size: 1.5rem;
+  @include maxLaptop4K {
+    font-size: 1.5rem * $coef4K;
+  }
+  @include maxLaptopL {
+    font-size: 1.5rem * $coefLL;
+  }
+  @include maxLaptop {
+    font-size: 1.5rem * $coefL;
+  }
+}
+
+p {
+  font-size: 1.5rem;
+  @include maxLaptop4K {
+    font-size: 1.5rem * $coef4K;
+  }
+  @include maxLaptopL {
+    font-size: 1.5rem * $coefLL;
+  }
+  @include maxLaptop {
+    font-size: 1.5rem * $coefL;
+  }
+}
