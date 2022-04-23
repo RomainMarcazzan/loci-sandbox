@@ -18,7 +18,7 @@
         <div class="navbar__menu__right" v-show="!mobile">
           <li><NuxtLink to="/epicerie-contact">CONTACT</NuxtLink></li>
           <li><NuxtLink to="/">POUR LES PROS</NuxtLink></li>
-          <li><i class="far fa-search"></i></li>
+          <li @click="toggleSearch"><i class="far fa-search"></i></li>
         </div>
         <div class="navbar__menu__hamburger" v-show="mobile">
           <i
@@ -48,22 +48,34 @@
           ><li @click="toggleMobileNav">CONTACT</li></NuxtLink
         >
         <NuxtLink to="/">
-          <li @click="toggleMobileNav">POUR LES PROS</li></NuxtLink
+          <li class="navbar__menu__dropdown" @click="toggleMobileNav">POUR LES PROS</li></NuxtLink
         >
+        <li @click="toggleSearch"><i class="far fa-search"></i></li>
       </ul>
+      <div v-show="searchNav" class="navbar__menu__search slideInRight">
+        <input type="text" name="search" id="search" placeholder="Chercher un article..." />
+        <div v-for="(actu, i) in dataActualitiesArray" :key="i">
+          {{actu.titleA}}
+        </div>
+      </div>
+   
     </nav>
   </header>
 </template>
 
 <script>
+import { actualitiesMixin } from "@/mixins/actualitiesMixin"
+
 export default {
   data() {
     return {
       mobileNav: null,
       mobile: null,
       windowWidth: null,
+      searchNav:null,
     }
   },
+  mixins: [actualitiesMixin],
   mounted() {
     this.$nextTick(function () {
       this.checkScreen()
@@ -73,6 +85,9 @@ export default {
   methods: {
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav
+    },
+    toggleSearch(){
+      this.searchNav = !this.searchNav
     },
     checkScreen() {
       this.windowWidth = window.innerWidth
