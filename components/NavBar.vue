@@ -29,7 +29,7 @@
           <i
             class="far fa-times"
             v-show="mobileNav"
-            @click="mobileNav = false"
+            @click="toggleMobileNav"
           ></i>
         </div>
       </ul>
@@ -54,7 +54,7 @@
       </ul>
       <div v-show="searchNav" class="navbar__menu__search slideInRight">
         <input type="text" name="search" id="search" placeholder="Chercher un article..." />
-        <div v-for="(actu, i) in dataActualitiesArray" :key="i">
+        <div v-show="dataActualitiesArray" v-for="(actu, i) in dataActualitiesArray" :key="i">
           {{actu.titleA}}
         </div>
       </div>
@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { actualitiesMixin } from "@/mixins/actualitiesMixin"
+// import { actualitiesMixin } from "@/mixins/actualitiesMixin"
 
 export default {
   data() {
@@ -73,21 +73,25 @@ export default {
       mobile: null,
       windowWidth: null,
       searchNav:null,
+      // dataActualitiesArray: null,
     }
   },
-  mixins: [actualitiesMixin],
+  // mixins: [actualitiesMixin],
   mounted() {
+    window.addEventListener("resize", this.checkScreen)
     this.$nextTick(function () {
       this.checkScreen()
     })
-    window.addEventListener("resize", this.checkScreen)
   },
   methods: {
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav
+      this.searchNav = false
+
     },
     toggleSearch(){
       this.searchNav = !this.searchNav
+      this.dataActualitiesArray = JSON.parse(sessionStorage.getItem("dataActualitiesArray"));
     },
     checkScreen() {
       this.windowWidth = window.innerWidth
